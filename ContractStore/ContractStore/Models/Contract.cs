@@ -7,5 +7,6 @@ namespace ContractStore.Models
 {
     public class Contract
     {
+        
     }
 }

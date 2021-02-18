@@ -1,0 +1,19 @@
+﻿@model ContractStore.Models.Person
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in ViewBag.People)
+    {
+        <tr>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+        </tr>
+    }
+</table>
