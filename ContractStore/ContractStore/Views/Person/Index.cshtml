@@ -1,19 +1,38 @@
-﻿@model ContractStore.Models.Person
+﻿@model IEnumerable<ContractStore.Models.People.Person>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>First name</th>
-            <th>Last name</th>
-        </tr>
-    </thead>
+<h1>People</h1>
 
-    @foreach (var item in ViewBag.People)
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+    </tr>
+
+    @foreach (var person in Model)
     {
         <tr>
-            <td>@item.FirstName</td>
-            <td>@item.LastName</td>
+            <td>
+                @Html.DisplayFor(modelItem => person.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.LastName)
+            </td>
+            <td>
+                <!--<span>@person.BirthDate.Year. @person.BirthDate.Month. @person.BirthDate.Day.</span>-->
+                @person.BirthDate.ToShortDateString()
+            </td>
         </tr>
     }
+
 </table>
+
+<br />
+
+@Html.ActionLink("Add", "AddPerson")
