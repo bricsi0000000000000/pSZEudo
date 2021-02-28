@@ -1,0 +1,62 @@
+﻿@model ContractStore.Models.People.Person
+
+@using (Html.BeginForm("AddPerson", "Person", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <h4>New person</h4>
+        <hr />
+      
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(x => x.BirthDate.Day,
+                                                Enumerable.Range(1, 31)
+                                                    .Select(i => new SelectListItem
+                                                    {
+                                                        Value = i.ToString(),
+                                                        Text = i.ToString()
+                                                    }), "Day")
+
+                @Html.DropDownListFor(model => model.BirthDate.Month,
+                                               Enumerable.Range(1, 12)
+                                                   .Select(i => new SelectListItem
+                                                   {
+                                                       Value = i.ToString(),
+                                                       Text = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.GetMonthName(i)
+                                                   }), "Month")
+
+                @Html.DropDownListFor(model => model.BirthDate.Year,
+                                               Enumerable.Range(1900, 115)
+                                                   .Select(i => new SelectListItem
+                                                   {
+                                                       Value = i.ToString(),
+                                                       Text = i.ToString()
+                                                   }), "Year")
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Add" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@Html.ActionLink("Back", "Index")
