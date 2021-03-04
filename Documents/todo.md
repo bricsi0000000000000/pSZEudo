@@ -49,8 +49,7 @@ Az egyes nyilvántartásokban biztosan nyilvántartjuk minimum a következőket:
   - Azonosító
   - Viselt  név  (előtag  Pld.:  Dr.)
   - Családinév,  Utónév,  Születési  név,  anyja  neve, állampolgársága
-  - születési   helye
-  - ideje
+  - születési   helye, ideje
   - neme,   telefonszáma,   email   címe
   - lakcíme, **levelezési címe**
   - személyi igazolvány száma
