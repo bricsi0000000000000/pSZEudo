@@ -11,11 +11,11 @@ namespace ContractStore.Models.People
     {
         public int ID { get; set; }
 
-        [DisplayName("First name")]
+        [DisplayName("Utónév")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string FirstName { get; set; }
 
-        [DisplayName("Last name")]
+        [DisplayName("Családi név")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string LastName { get; set; }
 
@@ -24,7 +24,7 @@ namespace ContractStore.Models.People
         public string Nationality { get; set; }
         public string BirthPlace { get; set; }
 
-        [DisplayName("Birth date")]
+        [DisplayName("Születési idő")]
         [Required(ErrorMessage = "Birth date is required")]
         public DateTime BirthDate { get; set; }
         public enum GenderType { female, male }

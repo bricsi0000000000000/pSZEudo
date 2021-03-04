@@ -3,7 +3,7 @@
 @using (Html.BeginForm("AddPerson", "Person", FormMethod.Post))
 {
     <div class="form-horizontal">
-        <h4>New person</h4>
+        <h4>Új személy hozzáadása</h4>
         <hr />
       
         <div class="form-group">
@@ -31,7 +31,7 @@
                                                     {
                                                         Value = i.ToString(),
                                                         Text = i.ToString()
-                                                    }), "Day")
+                                                    }), "Nap")
 
                 @Html.DropDownListFor(model => model.BirthDate.Month,
                                                Enumerable.Range(1, 12)
@@ -39,7 +39,7 @@
                                                    {
                                                        Value = i.ToString(),
                                                        Text = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.GetMonthName(i)
-                                                   }), "Month")
+                                                   }), "Hónap")
 
                 @Html.DropDownListFor(model => model.BirthDate.Year,
                                                Enumerable.Range(1900, 115)
@@ -47,16 +47,16 @@
                                                    {
                                                        Value = i.ToString(),
                                                        Text = i.ToString()
-                                                   }), "Year")
+                                                   }), "Év")
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Add" class="btn btn-default" />
+                <input type="submit" value="Mentés" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-@Html.ActionLink("Back", "Index")
+@Html.ActionLink("Vissza", "Index")
