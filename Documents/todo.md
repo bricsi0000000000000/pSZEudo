@@ -47,7 +47,7 @@ Az egyes nyilvántartásokban biztosan nyilvántartjuk minimum a következőket:
   - Okmány  adatok  (típus;  szám,  állapot,  kiállítás  dátuma; kiállítószerv neve, visszavonás dátuma, oka; visszavonó szerv)
 - Természetes személyek esetén:
   - Azonosító
-  - Viselt  név  (előtag  Pld.:  Dr.)
+  - Viselt  név  (előtag  Pld.:  Dr. + Családinév + Utónév)
   - Családinév,  Utónév,  Születési  név,  anyja  neve, állampolgársága
   - születési   helye, ideje
   - neme,   telefonszáma,   email   címe
