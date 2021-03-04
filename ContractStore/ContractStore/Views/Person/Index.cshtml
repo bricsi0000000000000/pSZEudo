@@ -5,10 +5,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.BirthDate)
@@ -19,10 +19,10 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => person.FirstName)
+                @Html.DisplayFor(modelItem => person.LastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => person.LastName)
+                @Html.DisplayFor(modelItem => person.FirstName)
             </td>
             <td>
                 <!--<span>@person.BirthDate.Year. @person.BirthDate.Month. @person.BirthDate.Day.</span>-->

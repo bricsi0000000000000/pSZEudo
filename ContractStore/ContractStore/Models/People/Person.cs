@@ -11,13 +11,13 @@ namespace ContractStore.Models.People
     {
         public int ID { get; set; }
 
-        [DisplayName("Utónév")]
-        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
-        public string FirstName { get; set; }
-
         [DisplayName("Családi név")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string LastName { get; set; }
+
+        [DisplayName("Utónév")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
+        public string FirstName { get; set; }
 
         public string BirthName { get; set; }
         public string MotherName { get; set; }
