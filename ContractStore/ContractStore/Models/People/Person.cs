@@ -11,6 +11,10 @@ namespace ContractStore.Models.People
     {
         public int ID { get; set; }
 
+        [DisplayName("Viselt név")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
+        public string WornName { get; set; }
+
         [DisplayName("Név előtag")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string NamePrefix { get; set; }

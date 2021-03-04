@@ -5,6 +5,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.WornName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.NamePrefix)
         </th>
         <th>
@@ -22,6 +25,9 @@
     {
         <tr>
             <td>
+                @person.NamePrefix @person.LastName @person.FirstName
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => person.NamePrefix)
             </td>
             <td>
@@ -31,7 +37,6 @@
                 @Html.DisplayFor(modelItem => person.FirstName)
             </td>
             <td>
-                <!--<span>@person.BirthDate.Year. @person.BirthDate.Month. @person.BirthDate.Day.</span>-->
                 @person.BirthDate.ToShortDateString()
             </td>
         </tr>
