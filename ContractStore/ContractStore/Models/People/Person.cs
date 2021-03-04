@@ -27,7 +27,10 @@ namespace ContractStore.Models.People
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string FirstName { get; set; }
 
+        [DisplayName("Születési név")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string BirthName { get; set; }
+
         public string MotherName { get; set; }
         public string Nationality { get; set; }
         public string BirthPlace { get; set; }

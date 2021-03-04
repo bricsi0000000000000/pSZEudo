@@ -17,6 +17,9 @@
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.BirthName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.BirthDate)
         </th>
     </tr>
@@ -25,7 +28,7 @@
     {
         <tr>
             <td>
-                @person.NamePrefix @person.LastName @person.FirstName
+                @person.NamePrefix @person.LastName @person.FirstName @*WornName*@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => person.NamePrefix)
@@ -35,6 +38,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => person.FirstName)
+            </td>
+            <td>
+                @person.LastName @person.FirstName @*BirthName*@
             </td>
             <td>
                 @person.BirthDate.ToShortDateString()
