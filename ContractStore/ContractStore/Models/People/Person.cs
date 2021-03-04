@@ -31,6 +31,8 @@ namespace ContractStore.Models.People
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string BirthName { get; set; }
 
+        [DisplayName("Anyja neve")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string MotherName { get; set; }
         public string Nationality { get; set; }
         public string BirthPlace { get; set; }

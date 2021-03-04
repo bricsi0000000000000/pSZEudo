@@ -20,6 +20,9 @@
             @Html.DisplayNameFor(model => model.BirthName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.MotherName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.BirthDate)
         </th>
     </tr>
@@ -41,6 +44,9 @@
             </td>
             <td>
                 @person.LastName @person.FirstName @*BirthName*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.MotherName)
             </td>
             <td>
                 @person.BirthDate.ToShortDateString()
