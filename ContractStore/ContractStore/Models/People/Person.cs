@@ -39,6 +39,9 @@ namespace ContractStore.Models.People
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string Nationality { get; set; }
 
+        String[] Nations = new String[] { "Magyar", "Német" };
+
+
         [DisplayName("Születési hely")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string BirthPlace { get; set; }
@@ -46,7 +49,10 @@ namespace ContractStore.Models.People
         [DisplayName("Születési idő")]
         [Required(ErrorMessage = "Birth date is required")]
         public DateTime BirthDate { get; set; }
-        public enum GenderType { female, male }
+        public enum GenderType { male, female }
+
+        [DisplayName("Neme")]
+        [Required(ErrorMessage = "Birth date is required")]
         public GenderType Gender { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }

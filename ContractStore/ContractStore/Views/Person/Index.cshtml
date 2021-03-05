@@ -31,6 +31,9 @@
         <th>
             @Html.DisplayNameFor(model => model.BirthDate)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
     </tr>
 
     @foreach (var person in Model)
@@ -62,6 +65,9 @@
     </td>
     <td>
         @person.BirthDate.ToShortDateString()
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.Gender)
     </td>
 </tr>
     }
