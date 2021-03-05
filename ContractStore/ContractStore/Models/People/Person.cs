@@ -39,9 +39,6 @@ namespace ContractStore.Models.People
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string Nationality { get; set; }
 
-        String[] Nations = new String[] { "Magyar", "Német" };
-
-
         [DisplayName("Születési hely")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string BirthPlace { get; set; }
@@ -55,6 +52,9 @@ namespace ContractStore.Models.People
         [Required(ErrorMessage = "Birth date is required")]
         public GenderType Gender { get; set; }
         public string PhoneNumber { get; set; }
+
+        [DisplayName("E-mail cím")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string Email { get; set; }
         public string City { get; set; }
         public int PostCode { get; set; }
