@@ -34,7 +34,13 @@ namespace ContractStore.Models.People
         [DisplayName("Anyja neve")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string MotherName { get; set; }
+
+        [DisplayName("Állampolgárság")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string Nationality { get; set; }
+
+        [DisplayName("Születési hely")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string BirthPlace { get; set; }
 
         [DisplayName("Születési idő")]
