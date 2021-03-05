@@ -6,6 +6,198 @@ namespace ContractStore.Models.People
     {
         public static List<Person> People { get; set; } = new List<Person>();
 
-        //TODO add, delete, get person
+        public static void addToList(Person person)
+        {
+            People.Add(person);
+        }
+
+        public static void removeFromList(Person person)
+        {
+            People.Remove(person);
+        }
+
+        public static List<Person> getList()
+        {
+            return People;
+        }
+
+        public static bool findPersonID(string ID)
+        {
+            foreach(Person p in People)
+            {
+                if(p.PersonalID == ID)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool findPersonPhoneNumber(string phoneNumber)
+        {
+            foreach (Person p in People)
+            {
+                if (p.PhoneNumber == phoneNumber)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool findPersonEmail(string email)
+        {
+            foreach (Person p in People)
+            {
+                if (p.Email == email)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static List<Person> filterByLastName(string lastName)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.LastName == lastName)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByFirstName(string firstName)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.FirstName == firstName)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByMotherName(string motherName)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.MotherName == motherName)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByNationality(string nationality)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.Nationality == nationality)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByBirthPlace(string birthPlace)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.BirthPlace == birthPlace)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByOlderThan(System.DateTime birthDate)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.BirthDate < birthDate)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByYoungerThan(System.DateTime birthDate)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.BirthDate > birthDate)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByPostCode(int postCode)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.PostCode == postCode)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByGender(Person.GenderType gender)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.Gender == gender)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByCity(string city)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.City == city)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
+
+        public static List<Person> filterByStreet(string street)
+        {
+            List<Person> result = new List<Person>();
+            foreach (Person p in People)
+            {
+                if (p.Street == street)
+                {
+                    result.Add(p);
+                }
+            }
+            return result;
+        }
     }
 }
