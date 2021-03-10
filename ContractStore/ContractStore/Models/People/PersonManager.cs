@@ -21,6 +21,7 @@ namespace ContractStore.Models.People
             return People;
         }
 
+        // Finding methods
         public static bool findPersonID(string ID)
         {
             foreach(Person p in People)
@@ -57,6 +58,7 @@ namespace ContractStore.Models.People
             return false;
         }
 
+        // Filtering
         public static List<Person> filterByLastName(string lastName)
         {
             List<Person> result = new List<Person>();
@@ -199,5 +201,47 @@ namespace ContractStore.Models.People
             }
             return result;
         }
+
+        // Sorting methods
+        public static List<Person> sortByFirstName()
+        {
+            getList().Sort((x, y) => x.FirstName.CompareTo(y.FirstName));
+            return getList();
+        }
+
+        public static List<Person> sortByLastName()
+        {
+            getList().Sort((x, y) => x.LastName.CompareTo(y.LastName));
+            return getList();
+        }
+
+        public static List<Person> sortByMotherName()
+        {
+            getList().Sort((x, y) => x.MotherName.CompareTo(y.MotherName));
+            return getList();
+        }
+
+        public static List<Person> sortByNationality()
+        {
+            getList().Sort((x, y) => x.Nationality.CompareTo(y.Nationality));
+            return getList();
+        }
+        
+        public static List<Person> sortByEmail()
+        {
+            getList().Sort((x, y) => x.Email.CompareTo(y.Email));
+            return getList();
+        }
+        public static List<Person> sortByBirthPlace()
+        {
+            getList().Sort((x, y) => x.BirthPlace.CompareTo(y.BirthPlace));
+            return getList();
+        }
+        public static List<Person> sortByBirthDate()
+        {
+            getList().Sort((x, y) => x.BirthDate.CompareTo(y.BirthDate));
+            return getList();
+        }
+
     }
 }
