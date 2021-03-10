@@ -52,6 +52,12 @@
         <th>
             @Html.DisplayNameFor(model => model.HouseNumber)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonalID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaxNumber)
+        </th>
     </tr>
 
     @foreach (var person in Model)
@@ -104,6 +110,12 @@
     </td>
     <td>
         @Html.DisplayFor(modelItem => person.HouseNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.PersonalID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.TaxNumber)
     </td>
 </tr>
     }

@@ -74,7 +74,13 @@ namespace ContractStore.Models.People
         [DisplayName("Házszám")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public int HouseNumber { get; set; }
+
+        [DisplayName("Személyi igazolvány száma")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public int PersonalID { get; set; }
+
+        [DisplayName("Adószám")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public int TaxNumber { get; set; }
     }
 }

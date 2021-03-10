@@ -55,7 +55,7 @@ Az egyes nyilvántartásokban biztosan nyilvántartjuk minimum a következőket:
   - ✓neme
   - ✓telefonszáma
   - ✓email   címe
-  - lakcíme
+  - ✓lakcíme
   - **levelezési címe**
-  - személyi igazolvány száma
-  - adószáma 
+  - ✓személyi igazolvány száma
+  - ✓adószáma 
