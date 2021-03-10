@@ -46,11 +46,10 @@ namespace ContractStore.Models.People
         [DisplayName("Születési idő")]
         [Required(ErrorMessage = "Birth date is required")]
         public DateTime BirthDate { get; set; }
-        public enum GenderType { male, female }
 
         [DisplayName("Neme")]
-        [Required(ErrorMessage = "Birth date is required")]
-        public GenderType Gender { get; set; }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
+        public string Gender { get; set; }
         public string PhoneNumber { get; set; }
 
         [DisplayName("E-mail cím")]
