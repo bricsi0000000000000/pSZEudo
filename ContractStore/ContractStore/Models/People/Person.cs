@@ -58,9 +58,21 @@ namespace ContractStore.Models.People
         [DisplayName("E-mail cím")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string Email { get; set; }
-        public string City { get; set; }
+
+        [DisplayName("Irányítószám")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public int PostCode { get; set; }
+
+        [DisplayName("Város")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
+        public string City { get; set; }
+
+        [DisplayName("Utca")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string Street { get; set; }
+
+        [DisplayName("Házszám")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public int HouseNumber { get; set; }
         public int PersonalID { get; set; }
         public int TaxNumber { get; set; }
