@@ -49,12 +49,13 @@ Az egyes nyilvántartásokban biztosan nyilvántartjuk minimum a következőket:
   - Azonosító
   - ✓Viselt  név  (előtag  Pld.:  Dr. + Családi név + Utónév)
   - ✓Családinév,  Utónév,  Születési  név(Családi név + Utónév),  anyja  neve
-  - állampolgársága (Nem a legszebb megoldás, nem a Person osztályban van az állampolgárságok listája)
-  - születési   helye (Kész ugyan, de nem listából kiválasztós)
+  - ✓állampolgársága (Nem a legszebb megoldás, nem a Person osztályban van az állampolgárságok listája)
+  - ✓születési   helye (Kész ugyan, de nem listából kiválasztós)
   - ✓ideje
   - ✓neme
-  - telefonszáma
+  - ✓telefonszáma
   - ✓email   címe
-  - lakcíme, **levelezési címe**
+  - lakcíme
+  - **levelezési címe**
   - személyi igazolvány száma
   - adószáma 

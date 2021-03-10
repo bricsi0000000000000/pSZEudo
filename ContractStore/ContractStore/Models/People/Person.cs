@@ -50,6 +50,9 @@ namespace ContractStore.Models.People
         [DisplayName("Neme")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string Gender { get; set; }
+
+        [DisplayName("Telefonszám")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "required")]
         public string PhoneNumber { get; set; }
 
         [DisplayName("E-mail cím")]

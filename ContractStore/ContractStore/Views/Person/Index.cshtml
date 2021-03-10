@@ -37,45 +37,51 @@
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
     </tr>
 
     @foreach (var person in Model)
     {
-<tr>
-    <td>
-        @person.NamePrefix @person.LastName @person.FirstName @*WornName*@
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => person.NamePrefix)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => person.LastName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => person.FirstName)
-    </td>
-    <td>
-        @person.LastName @person.FirstName @*BirthName*@
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => person.MotherName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => person.Nationality)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => person.BirthPlace)
-    </td>
-    <td>
-        @person.BirthDate.ToShortDateString()
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => person.Gender)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => person.Email)
-    </td>
-</tr>
+        <tr>
+            <td>
+                @person.NamePrefix @person.LastName @person.FirstName @*WornName*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.NamePrefix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.FirstName)
+            </td>
+            <td>
+                @person.LastName @person.FirstName @*BirthName*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.MotherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.Nationality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.BirthPlace)
+            </td>
+            <td>
+                @person.BirthDate.ToShortDateString()
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.PhoneNumber)
+            </td>
+        </tr>
     }
 
 </table>
