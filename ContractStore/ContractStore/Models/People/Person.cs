@@ -35,7 +35,7 @@ namespace ContractStore.Models.People
         public int PostCode { get; set; }
         public string Street { get; set; }
         public int HouseNumber { get; set; }
-        public int PersonalID { get; set; }
+        public string PersonalID { get; set; }
         public int TaxNumber { get; set; }
     }
 }
