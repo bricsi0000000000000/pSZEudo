@@ -11,7 +11,7 @@ namespace ContractStore
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("Server=localhost;Database=Channels;Uid=root;Pwd=;");
+            optionsBuilder.UseMySql("Server=localhost;Database=ContractStore;Uid=root;Pwd=;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
