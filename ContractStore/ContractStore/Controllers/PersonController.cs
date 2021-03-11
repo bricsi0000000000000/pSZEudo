@@ -24,6 +24,7 @@ namespace ContractStore.Controllers
                                                  int.Parse(collection["BirthDate.Month"]),
                                                  int.Parse(collection["BirthDate.Day"]));
             person.BirthDate = incomingBirthDate;
+
             PersonManager.addToList(person);
 
             return View("Index", PersonManager.People);
