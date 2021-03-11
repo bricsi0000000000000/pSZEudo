@@ -9,11 +9,13 @@ namespace ContractStore.Models.People
         public static void addToList(Person person)
         {
             People.Add(person);
+            //TODO update database
         }
 
         public static void removeFromList(Person person)
         {
             People.Remove(person);
+            //TODO update database
         }
 
         public static List<Person> getList()
@@ -22,7 +24,7 @@ namespace ContractStore.Models.People
         }
 
         // Finding methods
-        public static bool findPersonID(string ID)
+        public static bool findPersonID(int ID)
         {
             foreach(Person p in People)
             {
@@ -163,7 +165,7 @@ namespace ContractStore.Models.People
             return result;
         }
 
-        public static List<Person> filterByGender(Person.GenderType gender)
+        public static List<Person> filterByGender(string gender)
         {
             List<Person> result = new List<Person>();
             foreach (Person p in People)
