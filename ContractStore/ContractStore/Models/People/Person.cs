@@ -81,6 +81,7 @@ namespace ContractStore.Models.People
 
         [DisplayName("Adószám")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "A mező kitöltése kötelező!")]
+
         public int TaxNumber { get; set; }
     }
 }
