@@ -24,6 +24,7 @@ namespace ContractStore.Models.People
                 var database = new DatabaseContext();
                 database.People.Load();
                 database.People.Add(person);
+                database.SaveChanges();
             }
             else
             {
@@ -38,6 +39,7 @@ namespace ContractStore.Models.People
             var database = new DatabaseContext();
             database.People.Load();
             database.People.Remove(person);
+            database.SaveChanges();
         }
 
         public static List<Person> getList()
