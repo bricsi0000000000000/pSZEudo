@@ -15,36 +15,39 @@ namespace ContractStore
     {
         public static void Main(string[] args)
         {
-            Person a = new Person();
-            Person b = new Person();
-            Person c = new Person();
-            Person d = new Person();
-            Person e = new Person();
-            
-            a.FirstName = "Patrik";
-            b.FirstName = "Balazs";
-            c.FirstName = "Richard";
-            d.FirstName = "Gergo";
-            e.FirstName = "Dora";
+            /* Person a = new Person();
+             Person b = new Person();
+             Person c = new Person();
+             Person d = new Person();
+             Person e = new Person();
 
-            PersonManager.addToList(a);
-            PersonManager.addToList(b);
-            PersonManager.addToList(c);
-            PersonManager.addToList(d);
-            PersonManager.addToList(e);
+             a.FirstName = "Patrik";
+             b.FirstName = "Balazs";
+             c.FirstName = "Richard";
+             d.FirstName = "Gergo";
+             e.FirstName = "Dora";
 
-            Trace.WriteLine(PersonManager.getList()[0].FirstName);
-            Trace.WriteLine(PersonManager.getList()[1].FirstName);
-            Trace.WriteLine(PersonManager.getList()[2].FirstName);
-            Trace.WriteLine(PersonManager.getList()[3].FirstName);
-            Trace.WriteLine(PersonManager.getList()[4].FirstName);
+             PersonManager.addToList(a);
+             PersonManager.addToList(b);
+             PersonManager.addToList(c);
+             PersonManager.addToList(d);
+             PersonManager.addToList(e);
 
-            PersonManager.sortByFirstName();
-            Trace.WriteLine(PersonManager.getList()[0].FirstName);
-            Trace.WriteLine(PersonManager.getList()[1].FirstName);
-            Trace.WriteLine(PersonManager.getList()[2].FirstName);
-            Trace.WriteLine(PersonManager.getList()[3].FirstName);
-            Trace.WriteLine(PersonManager.getList()[4].FirstName);
+             Trace.WriteLine(PersonManager.getList()[0].FirstName);
+             Trace.WriteLine(PersonManager.getList()[1].FirstName);
+             Trace.WriteLine(PersonManager.getList()[2].FirstName);
+             Trace.WriteLine(PersonManager.getList()[3].FirstName);
+             Trace.WriteLine(PersonManager.getList()[4].FirstName);
+
+             PersonManager.sortByFirstName();
+             Trace.WriteLine(PersonManager.getList()[0].FirstName);
+             Trace.WriteLine(PersonManager.getList()[1].FirstName);
+             Trace.WriteLine(PersonManager.getList()[2].FirstName);
+             Trace.WriteLine(PersonManager.getList()[3].FirstName);
+             Trace.WriteLine(PersonManager.getList()[4].FirstName);*/
+
+            PersonManager.LoadPeople();
+
             CreateHostBuilder(args).Build().Run();
         }
 

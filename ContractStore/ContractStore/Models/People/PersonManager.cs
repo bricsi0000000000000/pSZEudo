@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ContractStore.Models.People
 {
@@ -6,16 +8,38 @@ namespace ContractStore.Models.People
     {
         public static List<Person> People { get; set; } = new List<Person>();
 
+        public static void LoadPeople()
+        {
+            var database = new DatabaseContext();
+            database.People.Load();
+            People = database.People.ToList();
+        }
+
         public static void addToList(Person person)
         {
-            People.Add(person);
-            //TODO update database
+            if (!findPersonID(person.PersonalID))
+            {
+                People.Add(person);
+
+                var database = new DatabaseContext();
+                database.People.Load();
+                database.People.Add(person);
+                database.SaveChanges();
+            }
+            else
+            {
+                //TODO nem jó, már van ilyen
+            }
         }
 
         public static void removeFromList(Person person)
         {
             People.Remove(person);
-            //TODO update database
+
+            var database = new DatabaseContext();
+            database.People.Load();
+            database.People.Remove(person);
+            database.SaveChanges();
         }
 
         public static List<Person> getList()
@@ -26,9 +50,9 @@ namespace ContractStore.Models.People
         // Finding methods
         public static bool findPersonID(int ID)
         {
-            foreach(Person p in People)
+            foreach (Person p in People)
             {
-                if(p.PersonalID == ID)
+                if (p.PersonalID == ID)
                 {
                     return true;
                 }
@@ -228,7 +252,7 @@ namespace ContractStore.Models.People
             getList().Sort((x, y) => x.Nationality.CompareTo(y.Nationality));
             return getList();
         }
-        
+
         public static List<Person> sortByEmail()
         {
             getList().Sort((x, y) => x.Email.CompareTo(y.Email));
