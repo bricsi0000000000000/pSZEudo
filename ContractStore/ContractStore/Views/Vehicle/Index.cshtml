@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ContractStore.Models.Vehicle.Vehicle>
+
+<h1>Járművek</h1>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManuType)
+        </th>
+    </tr>
+
+    @foreach (var vehicle in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => vehicle.VehicleType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => vehicle.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => vehicle.ManuType)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+
+@Html.ActionLink("Jármű hozzáadása", "AddVehicle")
