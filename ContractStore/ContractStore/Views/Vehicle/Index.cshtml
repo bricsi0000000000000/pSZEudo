@@ -13,21 +13,63 @@
         <th>
             @Html.DisplayNameFor(model => model.ManuType)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValidityBegin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TransportablePeople)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfSeats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfStandingPlaces)
+        </th>
     </tr>
 
     @foreach (var vehicle in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => vehicle.VehicleType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => vehicle.Manufacturer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => vehicle.ManuType)
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.VehicleType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Manufacturer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.ManuType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.ProductYear)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Category)
+    </td>
+    <td>
+        @vehicle.ValidityBegin.ToShortDateString()
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Mass)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.TransportablePeople)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.NumberOfSeats)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.NumberOfStandingPlaces)
+    </td>
+</tr>
     }
 
 </table>

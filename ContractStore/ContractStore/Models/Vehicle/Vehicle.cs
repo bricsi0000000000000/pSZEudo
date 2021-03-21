@@ -30,14 +30,14 @@ namespace ContractStore.Models.Vehicle
         [Required(AllowEmptyStrings = false, ErrorMessage = "Válasszon gyártási évet!")]
         public int ProductYear { get; set; }
 
-        [DisplayName("Jármű Kategóriája")]
+        [DisplayName("Jármű kategóriája")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Válasszon kategóriát!")]
         public string Category { get; set; }
 
         [DisplayName("Érvényesség ideje")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Válassza ki az érvényesség idejét!")]
         public DateTime ValidityBegin { get; set; }
-        [DisplayName("Jármű Kategóriája")]
+        [DisplayName("Össztömeg")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Válassza ki a jármű tömegét!")]
         public int Mass { get; set; }
         [DisplayName("Szállítható személyek száma")]
