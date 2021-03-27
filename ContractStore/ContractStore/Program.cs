@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using ContractStore.Models;
 
 namespace ContractStore
 {
@@ -15,12 +16,13 @@ namespace ContractStore
     {
         public static void Main(string[] args)
         {
+
             Person a = new Person();
             Person b = new Person();
             Person c = new Person();
             Person d = new Person();
             Person e = new Person();
-            
+
             a.FirstName = "Patrik";
             b.FirstName = "Balazs";
             c.FirstName = "Richard";
@@ -32,6 +34,10 @@ namespace ContractStore
             PersonManager.addToList(c);
             PersonManager.addToList(d);
             PersonManager.addToList(e);
+
+            Contract contract = new VehicleContract(a, b);
+            contract.createPdf();
+
 
             Trace.WriteLine(PersonManager.getList()[0].FirstName);
             Trace.WriteLine(PersonManager.getList()[1].FirstName);
@@ -45,6 +51,7 @@ namespace ContractStore
             Trace.WriteLine(PersonManager.getList()[2].FirstName);
             Trace.WriteLine(PersonManager.getList()[3].FirstName);
             Trace.WriteLine(PersonManager.getList()[4].FirstName);
+
             CreateHostBuilder(args).Build().Run();
         }
 
