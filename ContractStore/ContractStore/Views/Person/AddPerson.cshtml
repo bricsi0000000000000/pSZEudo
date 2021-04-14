@@ -49,7 +49,6 @@
     <div class="form-group">
         @Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-
             @Html.DropDownListFor(model => model.BirthDate.Year,
                                            Enumerable.Range(1900, 115)
                                                .Select(i => new SelectListItem
@@ -73,30 +72,38 @@
                                                     Value = i.ToString(),
                                                     Text = i.ToString()
                                                 }), "Nap")
+            <br />
+            @Html.ValidationMessageFor(model => model.BirthDate.Year, "", new { @class = "text-danger" })
+            <br />
+            @Html.ValidationMessageFor(model => model.BirthDate.Month, "", new { @class = "text-danger" })
+            <br />
+            @Html.ValidationMessageFor(model => model.BirthDate.Day, "", new { @class = "text-danger" })
         </div>
 
         <div class="form-group">
             <br><br />
             @Html.LabelFor(model => model.Nationality, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @{
-                    List<SelectListItem> Nations = new List<SelectListItem>();
-                    Nations.Add(new SelectListItem
-                    {
-                        Text = "Magyar"
-                    });
-                    Nations.Add(new SelectListItem
-                    {
-                        Text = "Német"
-                    });
-                    Nations.Add(new SelectListItem
-                    {
-                        Text = "Horvát"
-                    });
-                }
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> Nations = new List<SelectListItem>();
+                Nations.Add(new SelectListItem
+                {
+                    Text = "Magyar"
+                });
+                Nations.Add(new SelectListItem
+                {
+                    Text = "Német"
+                });
+                Nations.Add(new SelectListItem
+                {
+                    Text = "Horvát"
+                });
+            }
 
-                @Html.DropDownListFor(model => model.Nationality, Nations, "Állampolgárság")
-            </div>
+            @Html.DropDownListFor(model => model.Nationality, Nations, "Állampolgárság")
+            <br />
+            @Html.ValidationMessageFor(model => model.Nationality, "", new { @class = "text-danger" })
+        </div>
         </div>
 
         <div class="form-group">
@@ -115,6 +122,8 @@
                 }
 
                 @Html.DropDownListFor(model => model.Gender, Genders, "Nem")
+                <br />
+                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
             </div>
         </div>
     </div>
