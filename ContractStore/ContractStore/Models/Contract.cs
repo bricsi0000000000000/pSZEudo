@@ -205,10 +205,10 @@ namespace ContractStore.Models
                 + encodedText("év") + dotLine(4) + encodedText("hó") +dotLine(4) + encodedText("napján."), regularFont));
             doc.Add(new Paragraph(dotLine(30) + "    " + dotLine(30) +encodedText("\n              Eladó                    Vevő"), regularFont));
             doc.Add(new Paragraph(encodedText("Előttünk mint tanúk előtt:"), regularFont));
-            doc.Add(new Paragraph(encodedText("1.Családi és utónév:"), regularFont));
-            doc.Add(new Paragraph(encodedText("lakcím:")+dotLine(20), regularFont));
-            doc.Add(new Paragraph(encodedText("2.Családi és utónév:")+dotLine(20), regularFont));
-            doc.Add(new Paragraph(encodedText("lakcím:")+dotLine(20), regularFont));
+            doc.Add(new Paragraph(encodedText("1.Családi és utónév:")+dotLine(25), regularFont));
+            doc.Add(new Paragraph(encodedText("lakcím:")+dotLine(25), regularFont));
+            doc.Add(new Paragraph(encodedText("2.Családi és utónév:")+dotLine(25), regularFont));
+            doc.Add(new Paragraph(encodedText("lakcím:")+dotLine(25), regularFont));
 
             doc.Close();
         }
