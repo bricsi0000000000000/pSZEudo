@@ -1,4 +1,5 @@
-﻿using ContractStore.Models.People;
+﻿using ContractStore.Models;
+using ContractStore.Models.People;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -24,8 +25,16 @@ namespace ContractStore
             };
 
             modelBuilder.Entity<Person>().HasData(people);
+
+            var users = new List<User>()
+            {
+                new User() { ID = 1, Name = "Ricsi", Email = "ricsi@bolya.eu", PasswordHash = "NJSAj6vUdXexj54gYy+4DYmLpK1JNIno2W6P14JwMtccurNK"} // abc123456
+            };
+
+            modelBuilder.Entity<User>().HasData(users);
         }
 
         public DbSet<Person> People { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
