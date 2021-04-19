@@ -24,6 +24,8 @@ namespace ContractStore
             Person e = new Person();
 
             a.FirstName = "Patrik";
+            a.LastName = "Kovacs";
+            a.PersonalID = 7884764;
             b.FirstName = "Balazs";
             c.FirstName = "Richard";
             d.FirstName = "Gergo";
@@ -35,16 +37,16 @@ namespace ContractStore
             PersonManager.addToList(d);
             PersonManager.addToList(e);
 
-            Contract contract = new VehicleContract(a, b);
+            VehicleContract contract = new VehicleContract(a, b);
+            
             contract.createPdf();
-
 
             Trace.WriteLine(PersonManager.getList()[0].FirstName);
             Trace.WriteLine(PersonManager.getList()[1].FirstName);
             Trace.WriteLine(PersonManager.getList()[2].FirstName);
             Trace.WriteLine(PersonManager.getList()[3].FirstName);
             Trace.WriteLine(PersonManager.getList()[4].FirstName);
-
+            
             PersonManager.sortByFirstName();
             Trace.WriteLine(PersonManager.getList()[0].FirstName);
             Trace.WriteLine(PersonManager.getList()[1].FirstName);
