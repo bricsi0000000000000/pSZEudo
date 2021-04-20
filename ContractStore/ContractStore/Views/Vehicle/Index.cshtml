@@ -1,0 +1,175 @@
+﻿@model IEnumerable<ContractStore.Models.Vehicle.Vehicle>
+
+<h1>Járművek</h1>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManuType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValidityBegin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TransportablePeople)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfSeats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfStandingPlaces)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RateOfPerformance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TractionData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TechnicalValidity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegisterDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlacedInTrafficDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChassisNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngineNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Performance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propellant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnvironmentProtectionClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GearBoxType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngineData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LicencePlate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProhibitionOfSelling)
+        </th>
+    </tr>
+
+    @foreach (var vehicle in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.VehicleType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Manufacturer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.ManuType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.ProductYear)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Category)
+    </td>
+    <td>
+        @vehicle.ValidityBegin.ToShortDateString()
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Mass)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.TransportablePeople)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.NumberOfSeats)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.NumberOfStandingPlaces)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.RateOfPerformance)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.TractionData)
+    </td>
+    <td>
+        @vehicle.TechnicalValidity.ToShortDateString()
+    </td>
+    <td>
+        @vehicle.RegisterDate.ToShortDateString()
+    </td>
+    <td>
+        @vehicle.PlacedInTrafficDate.ToShortDateString()
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.ChassisNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.EngineNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Capacity)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Performance)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Propellant)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.EnvironmentProtectionClass)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.GearBoxType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.EngineData)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.Color)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.LicencePlate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => vehicle.ProhibitionOfSelling)
+    </td>
+</tr>
+    }
+
+</table>
+
+<br />
+
+@Html.ActionLink("Jármű hozzáadása", "AddVehicle")
