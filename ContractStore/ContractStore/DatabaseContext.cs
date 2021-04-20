@@ -1,5 +1,6 @@
 ﻿using ContractStore.Models;
 using ContractStore.Models.People;
+using ContractStore.Models.Vehicle;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,15 @@ namespace ContractStore
 
             modelBuilder.Entity<Person>().HasData(people);
 
+            var vehicles = new List<Vehicle>()
+            {
+                new Vehicle() { ID = 1, Capacity = 100, Category = "category1", ChassisNumber = "lx123456", Color = "kék", EngineData = "abc122", EngineNumber = "123456678", EnvironmentProtectionClass = "class1", GearBoxType = "automatic", LicencePlate = "abc123", Manufacturer = "bmw", ManuType = "type1", Mass = 1000, NumberOfSeats = 4, NumberOfStandingPlaces = 0, Performance = 1200, PlacedInTrafficDate = new DateTime(2018, 4,9), ProductYear = 2014, ProhibitionOfSelling = "yes", Propellant = "no", RateOfPerformance = 98.9, RegisterDate = new DateTime(2016,3,7), TechnicalValidity = new DateTime(2222,4,6), TractionData = "good", TransportablePeople = 5, ValidityBegin = new DateTime(2021,2,2), VehicleType = "BMW 1" },
+                new Vehicle() { ID = 2, Capacity = 100, Category = "category2", ChassisNumber = "lr123456", Color = "piros", EngineData = "abc134", EngineNumber = "123456678", EnvironmentProtectionClass = "class2", GearBoxType = "manual", LicencePlate = "abc444", Manufacturer = "audi", ManuType = "type2", Mass = 1000, NumberOfSeats = 4, NumberOfStandingPlaces = 0, Performance = 1200, PlacedInTrafficDate = new DateTime(2018, 4,9), ProductYear = 2014, ProhibitionOfSelling = "yes", Propellant = "no", RateOfPerformance = 98.9, RegisterDate = new DateTime(2016,3,7), TechnicalValidity = new DateTime(2222,4,6), TractionData = "good", TransportablePeople = 5, ValidityBegin = new DateTime(2021,2,2), VehicleType = "audi 1" },
+                new Vehicle() { ID = 3, Capacity = 100, Category = "category3", ChassisNumber = "lj123456", Color = "narancs", EngineData = "abc552", EngineNumber = "123456678", EnvironmentProtectionClass = "class3", GearBoxType = "fél automata", LicencePlate = "abc555", Manufacturer = "mercedes", ManuType = "type3", Mass = 1000, NumberOfSeats = 4, NumberOfStandingPlaces = 0, Performance = 1200, PlacedInTrafficDate = new DateTime(2018, 4,9), ProductYear = 2014, ProhibitionOfSelling = "yes", Propellant = "no", RateOfPerformance = 98.9, RegisterDate = new DateTime(2016,3,7), TechnicalValidity = new DateTime(2222,4,6), TractionData = "good", TransportablePeople = 5, ValidityBegin = new DateTime(2021,2,2), VehicleType = "w12" },
+            };
+
+            modelBuilder.Entity<Vehicle>().HasData(vehicles);
+
             var users = new List<User>()
             {
                 new User() { ID = 1, Name = "Ricsi", Email = "ricsi@bolya.eu", PasswordHash = "NJSAj6vUdXexj54gYy+4DYmLpK1JNIno2W6P14JwMtccurNK"} // abc123456
@@ -35,6 +45,7 @@ namespace ContractStore
         }
 
         public DbSet<Person> People { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<User> Users { get; set; }
     }
 }

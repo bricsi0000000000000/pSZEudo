@@ -1,10 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ContractStore.Models.Vehicle
 {
     public static class VehicleManager
     {
         public static List<Vehicle> VehicleList { get; set; } = new List<Vehicle>();
+
+        public static void LoadVehicles()
+        {
+            var database = new DatabaseContext();
+            database.Vehicles.Load();
+            VehicleList = database.Vehicles.ToList();
+        }
 
         public static void addToList(Vehicle vehicle)
         {

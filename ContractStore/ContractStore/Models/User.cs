@@ -25,7 +25,7 @@ namespace ContractStore.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "A mező kitöltése kötelező!")]
         [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$", ErrorMessage = "A jelszó nem megfelelő formátumú. Minimum 8 karakter.")]
         [DataType(DataType.Password)]
-        [NotMapped] // nem menti el az adatbázisban
+        [NotMapped]
         public string Password { get; set; }
     }
 }

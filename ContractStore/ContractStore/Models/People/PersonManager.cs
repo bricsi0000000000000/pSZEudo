@@ -26,10 +26,6 @@ namespace ContractStore.Models.People
                 database.People.Add(person);
                 database.SaveChanges();
             }
-            else
-            {
-                //TODO nem jó, már van ilyen
-            }
         }
 
         public static void removeFromList(Person person)

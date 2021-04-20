@@ -1,4 +1,5 @@
 using ContractStore.Models.People;
+using ContractStore.Models.Vehicle;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -15,38 +16,8 @@ namespace ContractStore
     {
         public static void Main(string[] args)
         {
-            /* Person a = new Person();
-             Person b = new Person();
-             Person c = new Person();
-             Person d = new Person();
-             Person e = new Person();
-
-             a.FirstName = "Patrik";
-             b.FirstName = "Balazs";
-             c.FirstName = "Richard";
-             d.FirstName = "Gergo";
-             e.FirstName = "Dora";
-
-             PersonManager.addToList(a);
-             PersonManager.addToList(b);
-             PersonManager.addToList(c);
-             PersonManager.addToList(d);
-             PersonManager.addToList(e);
-
-             Trace.WriteLine(PersonManager.getList()[0].FirstName);
-             Trace.WriteLine(PersonManager.getList()[1].FirstName);
-             Trace.WriteLine(PersonManager.getList()[2].FirstName);
-             Trace.WriteLine(PersonManager.getList()[3].FirstName);
-             Trace.WriteLine(PersonManager.getList()[4].FirstName);
-
-             PersonManager.sortByFirstName();
-             Trace.WriteLine(PersonManager.getList()[0].FirstName);
-             Trace.WriteLine(PersonManager.getList()[1].FirstName);
-             Trace.WriteLine(PersonManager.getList()[2].FirstName);
-             Trace.WriteLine(PersonManager.getList()[3].FirstName);
-             Trace.WriteLine(PersonManager.getList()[4].FirstName);*/
-
             PersonManager.LoadPeople();
+            VehicleManager.LoadVehicles();
 
             CreateHostBuilder(args).Build().Run();
         }

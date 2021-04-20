@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ContractStore.Models.People;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics.Contracts;
 
 namespace ContractStore.Controllers
@@ -7,9 +8,18 @@ namespace ContractStore.Controllers
     {
         public IActionResult Index()
         {
-            
-
             return View();
+        }
+
+        public IActionResult People()
+        {
+            ViewBag.People = PersonManager.People;
+            return View("People");
+        }
+
+        public IActionResult Vehicles()
+        {
+            return View("Vehicles");
         }
     }
 }
