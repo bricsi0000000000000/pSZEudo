@@ -16,7 +16,7 @@ jobs:
 
         # Generate the website
         - name: Publish
-          run: dotnet publish ContractStore/ContractStore/ContractStore.csproj --configuration Release
+          run: dotnet publish ContractStore/ContractStore/ContractStore.csproj --configuration Debug
 
         # Publish the website
         - name: GitHub Pages action
@@ -25,7 +25,7 @@ jobs:
           with:
             github_token: ${{ secrets.PUBLISH_TOKEN }}
             publish_branch: gh-pages
-            publish_dir: bin/Release/publish
+            publish_dir: bin/Debug/netcoreapp3.1
             allow_empty_commit: false
             keep_files: false
             force_orphan: true
