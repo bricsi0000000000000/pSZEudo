@@ -29,9 +29,3 @@ jobs:
             allow_empty_commit: false
             keep_files: false
             force_orphan: true
-
-        # Generate the website
-        - name: Publish
-          run: |
-            cp ContractStore/ContractStore/Views/Home/Index.html wwwroot/404.html
-            dotnet publish ContractStore/ContractStore/ContractStore.csproj --configuration Release
