@@ -33,5 +33,5 @@ jobs:
         # Generate the website
         - name: Publish
           run: |
-            cp Views/Home/index.html wwwroot/404.html
+            cp ContractStore/ContractStore/Views/Home/index.html wwwroot/404.html
             dotnet publish ContractStore/ContractStore/ContractStore.csproj --configuration Release
