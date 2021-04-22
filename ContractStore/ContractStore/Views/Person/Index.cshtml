@@ -1,0 +1,127 @@
+﻿@model IEnumerable<ContractStore.Models.People.Person>
+
+<h1>Természetes személyek</h1>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WornName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NamePrefix)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthPlace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonalID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaxNumber)
+        </th>
+    </tr>
+
+    @foreach (var person in Model)
+    {
+<tr>
+    <td>
+        @person.NamePrefix @person.LastName @person.FirstName @*WornName*@
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.NamePrefix)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.FirstName)
+    </td>
+    <td>
+        @person.LastName @person.FirstName @*BirthName*@
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.MotherName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.Nationality)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.BirthPlace)
+    </td>
+    <td>
+        @person.BirthDate.ToShortDateString()
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.Gender)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.PhoneNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.PostCode)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.City)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.Street)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.HouseNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.PersonalID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => person.TaxNumber)
+    </td>
+</tr>
+    }
+
+</table>
+
+<br />
+
+@Html.ActionLink("Személy hozzáadása", "AddPerson")
