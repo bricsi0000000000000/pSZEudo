@@ -11,6 +11,8 @@ using ContractStore.Models.People;
 using System.Text;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Reflection.Metadata;
+using Document = iTextSharp.text.Document;
 
 namespace ContractStore.Models
 {
