@@ -1,0 +1,28 @@
+﻿@model ContractStore.Models.User
+
+<h1>User profile</h1>
+
+<table>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Name)</td>
+        <td class="font-weight-bold">@ViewBag.User.Name</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Email)</td>
+        <td class="font-weight-bold">@ViewBag.User.Email</td>
+    </tr>
+</table>
+
+<br />
+
+@{
+    if (ViewBag.User.Name.Equals(string.Empty))
+    {
+        @Html.ActionLink("Bejelentkezés", "LogIn")
+    }
+    else
+    {
+        @Html.ActionLink("Kijelentkezés", "LogOut")
+    }
+}
+
